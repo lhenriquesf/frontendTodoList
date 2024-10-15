@@ -12,7 +12,7 @@ let currentEditIndex = null;
 
 // Função para carregar tarefas
 async function loadTasks() {
-    const response = await fetch('https://to-dolist-do90.onrender.com/api/', {
+    const response = await fetch('https://to-dolist-do90.onrender.com/api', {
         method: 'GET',
     });
     tasks = await response.json();
@@ -85,7 +85,7 @@ addTaskButton.onclick = async () => {
         return;
     }
 
-    await fetch('https://to-dolist-do90.onrender.com/api/', {
+    await fetch('https://to-dolist-do90.onrender.com/api', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
