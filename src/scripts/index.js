@@ -33,7 +33,7 @@ function renderTasks() {
             // Redireciona para a tela de login se não estiver logado
             if (!localStorage.getItem('token')) {
                 alert('Você precisa estar logado para editar a tarefa.');
-                window.location.href = '../src/pages/login.html'; // Redireciona para a tela de login
+                window.location.href = 'login.html'; // Redireciona para a tela de login
             } else {
                 currentEditIndex = index;
                 editTaskInput.value = task.task;
@@ -50,7 +50,7 @@ function renderTasks() {
             // Redireciona para a tela de login se não estiver logado
             if (!localStorage.getItem('token')) {
                 alert('Você precisa estar logado para excluir a tarefa.');
-                window.location.href = '../src/pages/login.html'; // Redireciona para a tela de login
+                window.location.href = 'login.html'; // Redireciona para a tela de login
             } else {
                 await fetch(`https://to-dolist-do90.onrender.com/api/${task.id}`, {
                     method: 'DELETE',
