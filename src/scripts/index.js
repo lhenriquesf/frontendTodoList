@@ -81,7 +81,7 @@ addTaskButton.onclick = async () => {
     if (!localStorage.getItem('token')) {
         alert('Você precisa estar logado para adicionar uma tarefa.');
         console.log('Redirecionando para login...');
-        window.location.href = '../src/pages/login.html'; // Redireciona para a tela de login
+        window.location.href = 'login.html'; // Redireciona para a tela de login
         return;
     }
 
