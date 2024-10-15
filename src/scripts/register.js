@@ -10,7 +10,7 @@ registerForm.onsubmit = async (event) => {
     const confirmPassword = document.getElementById('confirm-password').value; // Captura o campo confirm_password
 
     // Chamada para a API de registro
-    const response = await fetch('http://localhost:8000/auth/register', {
+    const response = await fetch('https://to-dolist-do90.onrender.com/auth/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

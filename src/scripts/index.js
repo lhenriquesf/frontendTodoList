@@ -12,7 +12,7 @@ let currentEditIndex = null;
 
 // Função para carregar tarefas
 async function loadTasks() {
-    const response = await fetch('http://localhost:8000/api/', {
+    const response = await fetch('https://to-dolist-do90.onrender.com/api/', {
         method: 'GET',
     });
     tasks = await response.json();
@@ -52,7 +52,7 @@ function renderTasks() {
                 alert('Você precisa estar logado para excluir a tarefa.');
                 window.location.href = '../src/pages/login.html'; // Redireciona para a tela de login
             } else {
-                await fetch(`http://localhost:8000/api/${task.id}`, {
+                await fetch(`https://to-dolist-do90.onrender.com/api/${task.id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -85,7 +85,7 @@ addTaskButton.onclick = async () => {
         return;
     }
 
-    await fetch('http://localhost:8000/api/', {
+    await fetch('https://to-dolist-do90.onrender.com/api/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ updateTaskButton.onclick = async () => {
         done: editStatusCheckbox.checked
     };
     
-    await fetch(`http://localhost:8000/api/${tasks[currentEditIndex].id}`, {
+    await fetch(`https://to-dolist-do90.onrender.com/api/${tasks[currentEditIndex].id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

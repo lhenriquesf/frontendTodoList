@@ -9,7 +9,7 @@ loginForm.onsubmit = async (event) => {
     const password = document.getElementById('password').value;
 
     // Chamada para a API de login
-    const response = await fetch('http://localhost:8000/auth/login', {
+    const response = await fetch('https://to-dolist-do90.onrender.com/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded', // Formato URL encoded
